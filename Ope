@@ -1,0 +1,89 @@
+package calificaciones;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Kevin
+ */
+public class ope {
+    int[ ] nc = new int[15];
+    int[ ] c = new int[15];
+    String[ ] nombre = new String[15];
+    Scanner leer= new Scanner(System.in);
+    int y;
+    public void alumnos(){
+    nc [0]= 18680156;
+    nc [1]= 19680091;
+    nc [2]= 19680092;
+    nc [3]= 19680113;
+    nc [4]= 19680133;
+    nc [5]= 17680136;
+    nc [6]= 18680108;
+    nc [7]= 19680957;
+    nc [8]= 19680144;
+    nc [9]= 19680156;
+    nc [10]= 19680162;
+    nc [11]= 19680958;
+    nc [12]= 19680177;
+    nc [13]= 18680163;
+    nc [14]= 18680165;
+
+
+     nombre[0]="ACEVEDO CAMPOS ARIAGNA";
+     nombre[1]="AMBROSIO PEREZ MICHAEL HAZIEL";
+     nombre[2]="AMBROSIO HERNANDEZ VIANEY CELERINA";
+     nombre[3]="CAMPOS CASASANERO JUAN PABLO";
+     nombre[4]="DIAZ DEL JESUS  MARIANA CAZZLING";
+     nombre[5]="DIAZ ROSAS ALEXIS EFREN";
+     nombre[6]="DOMIGNUEZ CAZALES JENNIFER IRLANDA";
+     nombre[7]="ELIGIO RAMOS MONSERRAT";
+     nombre[8]="FLORES MALDONADO LILIANA ";
+     nombre[9]="GOMEZ ARAGON EDGAR OMAR";
+     nombre[10]="GUITERRUEZ VALLE SAMARA";
+     nombre[11]="JUAREZ RAMOS ALEXIS MANUEL";
+     nombre[12]="LEYVA SLVA ROGELIO JESUS";
+     nombre[13]="MARTINEZ DE LOS SANTOS ISABEL";
+     nombre[14]="MARTINEZ RAYO IRIS MADAI";
+     
+     
+     
+    }
+    public void califiacion(){
+    
+        for(int i=0;i<=14;i++){
+            
+            System.out.println("Ingrese la calificacion de"+nombre[i]+"numero de control"+nc[i]);
+            y=leer.nextInt();
+            c[i]=y;
+        }
+        
+    }
+    public void prmg(){
+        int k,pro=0;
+        double ge;
+        pro=c[0]+c[1]+c[2]+c[3]+c[4]+c[5]+c[6]+c[7]+c[8]+c[9]+c[10]+c[11]+c[12]+c[13]+c[14];
+        ge=pro/15;
+          System.out.println("El promedio general es"+ge);
+        }
+    public void prop(){
+      int k,pro=0;
+        double g;
+        
+        pro=c[0]+c[1]+c[2]+c[3]+c[4];
+        g=pro/5;
+        System.out.println("El promedio general es"+g);
+        
+        
+    }
+    public void prou(){
+      int k,pro=0;
+        double g;
+      
+        pro=c[9]+c[10]+c[11]+c[12]+c[13]+c[14];
+        g=pro/5;
+        System.out.println("El promedio general es"+g);
+        
+    
+    }
+}
