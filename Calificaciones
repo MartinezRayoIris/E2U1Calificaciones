@@ -1,0 +1,60 @@
+package calificaciones;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Kevin
+ */
+public class Calificaciones {
+
+Scanner k= new Scanner(System.in);
+     ope f= new ope();
+
+     
+   void menu(){
+       int b;
+       f.alumnos();
+       f.califiacion();
+    int m;
+    System.out.println("1.Promedio genral de la clase");
+    System.out.println("2.Promedio de los 5 primeros");
+    System.out.println("3.Promedio de los 5 ultimos");
+    System.out.println("4.salir");
+    do{
+    System.out.println("que opcion desea?");
+    m=k.nextInt();
+    int s;
+    if(m<=4){
+    switch(s=m){
+        case 1:
+            f.prmg();
+            break;
+        case 2:
+            f.prop();
+            break;
+        case 3:
+            f.prou();
+            break;
+        case 4:
+            //k.close();
+            System.exit(0);
+            break;
+        default:
+            System.out.println("Opcion invalida");
+            break;
+    }
+    }//else{
+   // System.out.println("Esa opcion no existe");
+   /// k.close();
+    //}
+    System.out.println("Desea otra opcion? 1.si 2. no");
+     b=k.nextInt();
+   }while(b==1);
+    }
+    public static void main(String[] args) {
+       Calificaciones h= new Calificaciones();
+           h.menu();
+    }
+    
+}
